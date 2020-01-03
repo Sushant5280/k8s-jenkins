@@ -15,5 +15,5 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl 
 echo "kubectl version"  
 kubectl version --short --client 
-cd /home/ubuntu/.ssh 
+cd /var/lib/jenkins/.ssh
 ssh-keygen -t rsa -N "" -f id_rsa 
