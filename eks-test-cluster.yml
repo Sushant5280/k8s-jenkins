@@ -10,4 +10,4 @@ nodeGroups:
     instanceType: t2.medium
     desiredCapacity: 1
     ssh:
-      publicKeyPath: ~/.ssh/id_rsa.pub
+      publicKeyPath: /var/lib/jenkins/.ssh/id_rsa.pub
