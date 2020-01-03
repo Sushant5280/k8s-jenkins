@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: db
-        image: dockersamples/k8s-wordsmith-db
+        image: 574895887671.dkr.ecr.us-east-1.amazonaws.com/db:latest
         ports:
         - containerPort: 5432
           name: db
@@ -62,7 +62,7 @@ spec:
     spec:
       containers:
       - name: words
-        image: dockersamples/k8s-wordsmith-api
+        image: 574895887671.dkr.ecr.us-east-1.amazonaws.com/words:latest
         ports:
         - containerPort: 8080
           name: api
@@ -96,7 +96,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: dockersamples/k8s-wordsmith-web
+        image: 574895887671.dkr.ecr.us-east-1.amazonaws.com/web:latest
         ports:
         - containerPort: 80
           name: words-web
