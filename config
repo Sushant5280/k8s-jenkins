@@ -1,0 +1,28 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01ERXdOakEyTlRJd04xb1hEVE13TURFd016QTJOVEl3TjFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTmt0CnJwM05Vcnc5SXFDQ2JNcmh0dFJBSUIzV0h5KzRXN204WmhDOTQ3OUxSOXIxRnVkSTErR3ljVzExd1F1dzB4Um4KVGliR2JGWkU3SU02aCs0TkQyTGZYZGdMY3phQmZnbXl5NUFCODVDbE90b3ZqcC9DVFZiVlI4SVQ3SmwzdSs5ZgpyRTMrNWRlR1pqM3EwemlPOFhPSUs5anluRGxxdTlSVm0xQ1BXTmg1d2lBdEk5bk5BMXdKNkJaSklKZytYY2xhCnBDN3VXMlA4NHlUTDFQUTFWdjZETWp0dXd4Y0xRMmhMWExoRjB2Z1FzNUJmbi9oWmNORnpsaWljK2cwK0Z3ekoKU1BlMVA2VUhrK0p2ZXFNMmRkcnp0SEx0dTNpc1VVR0ZwTHJ6SS8rQkc0QWk1QVhOdjdNMmxXTUNNQ3dCVldJcApWZkpoRkwyV1pMRyt5alVSd0VrQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFJM3pnS2lKUG9uVno5eDIwZHdFTUpMUlpzeTEKcW9ob1VpQ05ncVViczRJek5TR3pDamcrNStGbGJwMk1TeC9najQwSExtU0RTcHNJNFJTeDNrTThpWERjbWxndApkQmVoTW9HbDA4SUJDRUUyS2tTWnNsbnhCUlZFdlNjeWlwUUMxMmRVTDBEYlB0SnJycUd0SUd1WHY4UUV1ekFWCmtBM2YyU2tyNGtLVlFOYndlY1RTT2dsMGY2N2FjanZONWxDZ0pLRUc4akpHNmE3UDFNTzd1QW0wOWFNWVhlMkIKb1gvS1NOUVRmc0xCUDMrTWcwOVFzY2V5ZmozTGc4ekRFVTZucjNham41K3VKaUdRL3RqWWVnVTljSEpwR3JGTAp1cXpJSmVXeGxJUW9uZVV5aTBxTkF2YWZqaFk4bjVrdndCWEdTbkE5WHBwbFZVN3FPSEpOT3lmRjJDMD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://46FA7ED0F7FAF5DEB15FF0B2586C5078.sk1.us-east-1.eks.amazonaws.com
+  name: my-cluster.us-east-1.eksctl.io
+contexts:
+- context:
+    cluster: my-cluster.us-east-1.eksctl.io
+    user: sushant@my-cluster.us-east-1.eksctl.io
+  name: sushant@my-cluster.us-east-1.eksctl.io
+current-context: sushant@my-cluster.us-east-1.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: sushant@my-cluster.us-east-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - eks
+      - get-token
+      - --cluster-name
+      - my-cluster
+      - --region
+      - us-east-1
+      command: aws
+      env: null
